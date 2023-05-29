@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-import profilepic from '../profile.jpg'
+// import profilepic from '../profile.jpg'
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -72,7 +72,7 @@ const Profile = () => {
     let deleteAccount = ()=>{
         // make the confirmation from user to delete
         let pwd = prompt("Are you sure to delete , if yes please provide password");
-        if(pwd != userdetails.password)
+        if(pwd !== userdetails.password)
         {
             alert("invalid password !!!");
             return;
@@ -99,7 +99,7 @@ const Profile = () => {
                 <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" alt="" />
             </div>
             <div className="profile">
-                <img src={profilepic} alt="" />
+                <img src="https://static.vecteezy.com/system/resources/previews/007/043/161/large_2x/male-avatar-smiling-portrait-of-a-cheerful-young-man-with-a-happy-smile-vector.jpg" alt="" />
                 <h1>{userdetails.username}</h1>
                 <button onClick={logout}>logout</button>
                 <button onClick={deleteAccount}>delete account</button>
